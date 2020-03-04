@@ -1,3 +1,4 @@
+#so that installed packages work correctly
 export PATH=/usr/local/bin:$PATH
 
 path=/path/to/desired/buffer/folder
@@ -14,6 +15,6 @@ screencapture -i $localfile
 #pngquant --strip --ext .png --force  $localfile
 
 #add set ftp:ssl-allow no; inside the quotes to disable ssl
-lftp ftp://username:passwordw@server.com   -e "put -O /path/to/desired/remote/folder $localfile; bye"
+lftp ftp://username:password@server.com   -e "put -O /path/to/desired/remote/folder $localfile; bye"
 
 printf $url | pbcopy
